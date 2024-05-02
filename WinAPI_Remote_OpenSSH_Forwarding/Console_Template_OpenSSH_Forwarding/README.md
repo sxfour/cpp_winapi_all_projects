@@ -1,5 +1,3 @@
-
-https://github.com/sxfour/cpp_winapi_all_projects/assets/112577182/0fd0a354-16d2-445b-9555-826d1fef6660
 # Создание пары ключей OpenSSH через exe c использованием powershell
 https://github.com/sxfour/cpp_winapi_all_projects/assets/112577182/671c3f3e-afa4-47da-95cb-03669cfc4eda
 
