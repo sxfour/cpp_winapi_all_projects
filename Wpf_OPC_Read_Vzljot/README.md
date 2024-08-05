@@ -4,4 +4,5 @@
 
 # Пример работы
 https://github.com/user-attachments/assets/35a2f43c-e93a-4fab-ad6a-42537cb3f8af
-
+# Переподключение
+https://github.com/user-attachments/assets/02410071-b435-4f16-9eb0-331277d38437
