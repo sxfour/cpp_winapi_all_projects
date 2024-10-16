@@ -1,0 +1,27 @@
+﻿<Window x:Class="wpf_tsrv.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_tsrv"
+        mc:Ignorable="d"
+        ResizeMode="CanResize"
+        Title="Опрос ТСРВ-024М и ТСР-023 (Насосная 33км)" Height="728" Width="1280" MinHeight="728" MinWidth="1280">
+    <Grid VerticalAlignment="Center">
+        <MediaElement x:Name="background" Margin="169,0,169,10" Source="background.gif" Opacity="0.2" MediaEnded="MediaElement_MediaEnded_back" Height="711" VerticalAlignment="Bottom"/>
+
+        <MediaElement x:Name="loop_2" Height="158" Margin="775,558,273,0" VerticalAlignment="Top" Source="loop.gif" MediaEnded="MediaElement_MediaEnded2"/>
+        <Rectangle Height="160" Margin="10,237,10,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Rectangle Height="160" Margin="10,440,10,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Label Content="ДУ 600" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="48" Background="#FF66D1FF" Height="75" Opacity="0.85"/>
+        <Label Content="ДУ 500" HorizontalAlignment="Center" Margin="0,402,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="48" Background="#FF66D1FF" Height="75" Opacity="0.85"/>
+        <Label x:Name="label_pressure_dy600" Content="0.0кгс/см2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="146" Margin="0,215,0,0"/>
+        <Rectangle Height="160                    " Margin="10,28,10,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Label Content="ДУ 800" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="48" Background="#FF66D1FF" Height="75" Margin="0,-9,0,0" Opacity="0.85"/>
+        <Label x:Name="label_pressure_dy800" Content="0.0кгс/см2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="146" Margin="0,6,0,0"/>
+        <Label x:Name="label_pressure_dy500" Content="0.0кгс/см2" HorizontalAlignment="Center" Margin="0,418,0,0" VerticalAlignment="Top" FontSize="146"/>
+        <TextBlock x:Name="label_status" HorizontalAlignment="Center" Margin="0,617,0,0" TextWrapping="Wrap" Text="Опрос: ожидание..." VerticalAlignment="Top" Width="410" Height="40" FontSize="26" Foreground="Black" Background="#FFFEFF45" TextAlignment="Center" Opacity="0.85"/>
+        <Label x:Name="splash_load" Content="Загрузка параметров..." Margin="10,-9,10,75" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="#F2FFFFFF" Opacity="0.9"/>
+
+    </Grid>
+</Window>

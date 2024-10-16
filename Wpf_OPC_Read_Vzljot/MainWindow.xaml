@@ -1,0 +1,86 @@
+﻿<Window x:Class="wpf_opcua_tsr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_opcua_tsr"
+        mc:Ignorable="d"
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen"
+        Title="Опрос ТСРВ-024М и ТСР-023 (Основная)" Height="728" Width="1280" MinHeight="728" MinWidth="1280">
+    <Grid VerticalAlignment="Center" Height="676">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="440"/>
+        </Grid.ColumnDefinitions>
+        <Image HorizontalAlignment="Left" Height="84" Margin="22,405,0,0" VerticalAlignment="Top" Width="86" Source="/collector.png" Stretch="UniformToFill"/>
+        <MediaElement x:Name="background" Margin="10,10,10,10" Opacity="0.2" MediaEnded="MediaElement_MediaEnded_back" Source="background.gif" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" IsMuted="True"/>
+        <MediaElement x:Name="loop" HorizontalAlignment="Left" Height="170" Margin="266,506,0,0" VerticalAlignment="Top" Width="238" MediaEnded="MediaElement_MediaEnded" LoadedBehavior="Play" RenderTransformOrigin="0.5,0.5" Source="loop.gif" Grid.Column="1">
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.46"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+        </MediaElement>
+        <Menu FontSize="14" Grid.ColumnSpan="2" Height="21" VerticalAlignment="Top">
+            <MenuItem Header="Настройки">
+                <MenuItem Header="Изменить подключение к серверу" Click="ItemClickConfig"/>
+                <MenuItem Header="Изменить период опроса" IsEnabled="False"/>
+                <MenuItem Header="Изменить таймаут сессии" IsEnabled="False"/>
+                <Separator />
+                <MenuItem Header="Выход" Click="ItemClickExit"/>
+            </MenuItem>
+            <MenuItem Header="Мнемосхемы">
+                <MenuItem Header="Таблица Насосная 33км" Click="ItemClick33km"/>
+                <Separator />
+                <MenuItem Header="Запускать все таблицы при старте" IsCheckable="True"/>
+            </MenuItem>
+            <MenuItem Header="Мониторинг параметров">
+                <MenuItem Header="ТСРВ-024М" Click="ItemClickTSRV024Python"/>
+                <MenuItem Header="ТСР-023" Click="ItemClickTSRV023Python"/>
+            </MenuItem>
+
+            <MenuItem Header="О программе">
+                <MenuItem Header="Помощь" IsEnabled="False"/>
+                <MenuItem Header="Лицензия" Click="ItemClickLicense"/>
+                <MenuItem Header="Информация" Click="ItemClickInfo"/>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="label_pressure_800" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="80,89,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Rectangle HorizontalAlignment="Left" Height="46" Margin="17,144,0,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Width="800" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Label Content="800 (Подача)" HorizontalAlignment="Left" Margin="323,142,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="Black" FontSize="30"/>
+        <Label Content="Пикет  №1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" Margin="10,23,0,0"/>
+        <Rectangle HorizontalAlignment="Left" Height="46" Margin="17,243,0,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Width="800" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Label Content="600 (Обратка)" HorizontalAlignment="Left" Margin="323,241,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="Black" FontSize="30"/>
+        <Rectangle HorizontalAlignment="Left" Height="46" Margin="17,338,0,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Width="800" Fill="#FFADF6FF" Opacity="0.85"/>
+        <Label Content="500 (Обратка)" HorizontalAlignment="Left" Margin="323,336,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="Black" FontSize="30"/>
+        <Label x:Name="label_temp_800" Content="0.0°C" HorizontalAlignment="Left" Margin="384,89,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_volume_800" Content="0.0м3/ч" HorizontalAlignment="Left" Margin="620,89,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_pressure_600" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="80,193,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_temp_600" Content="0.0°C" HorizontalAlignment="Left" Margin="384,193,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_volume_600" Content="0.0м3/ч" HorizontalAlignment="Left" Margin="620,193,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_pressure_500" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="80,288,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_temp_500" Content="0.0°C" HorizontalAlignment="Left" Margin="384,288,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_volume_500" Content="0.0м3/ч" HorizontalAlignment="Left" Margin="620,288,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Rectangle HorizontalAlignment="Left" Height="114" Margin="10,145,0,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Width="410" Fill="#FFADF6FF" Grid.Column="1" Opacity="0.85"/>
+        <Rectangle HorizontalAlignment="Left" Height="114" Margin="10,269,0,0" Stroke="#FF85F1FF" VerticalAlignment="Top" Width="410" Fill="#FFADF6FF" Grid.Column="1" Opacity="0.85"/>
+        <Label Content="Насосная 33км" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" Margin="45,23,0,0" Grid.Column="1"/>
+        <Label Content="ДУ 600" HorizontalAlignment="Left" Margin="163,123,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="30" Background="#FF66D1FF" Height="50" Grid.Column="1" Opacity="0.85"/>
+        <Label Content="ДУ 500" HorizontalAlignment="Left" Margin="163,251,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="30" Background="#FF66D1FF" Height="50" Grid.Column="1" Opacity="0.85"/>
+        <Label x:Name="label_pressure_dy600" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="104,173,0,0" VerticalAlignment="Top" FontSize="45" Grid.Column="1"/>
+        <Label x:Name="label_pressure_dy500" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="104,291,0,0" VerticalAlignment="Top" FontSize="45" Grid.Column="1"/>
+        <Label x:Name="label_temp_air" Content="🌡 нар. воздуха: " HorizontalAlignment="Left" Margin="12,446,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_reverse" Content="⮌ :" HorizontalAlignment="Left" Margin="84,391,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_temp_cold_water" Content="🌡 ХВ: " HorizontalAlignment="Left" Margin="12,496,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_time" Content="00.00.0000 / 00:00:00" HorizontalAlignment="Left" Margin="10,534,0,0" VerticalAlignment="Top" FontSize="72" Height="100"/>
+        <TextBlock x:Name="label_status" HorizontalAlignment="Left" Margin="10,570,0,0" TextWrapping="Wrap" Text="Опрос: ожидание..." VerticalAlignment="Top" Width="317" Height="40" FontSize="26" Foreground="Black" Background="#FFFEFF45" TextAlignment="Center" Grid.Column="1" Opacity="0.85"/>
+        <Label x:Name="label_temp_air_value" Content="0.0°C" HorizontalAlignment="Left" Margin="234,446,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_temp_cold_water_value" Content="0.0°C" HorizontalAlignment="Left" Margin="94,496,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_reverse_value" Content="0.0кгс/см2" HorizontalAlignment="Left" Margin="140,396,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="splash_load" Content="Загрузка параметров..." Margin="10,26,10,117" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="#F2FFFFFF" Opacity="0.9" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="label_alert_reload" Margin="10,641,10,0" TextWrapping="Wrap" Text="   Уведомление: С 00:00 до 2:00 происходит перезапуск сервера, показания могут пропасть на несколько секунд." VerticalAlignment="Top" Background="#99FDFF00" Grid.ColumnSpan="2" FontSize="16" Height="25" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Window>
