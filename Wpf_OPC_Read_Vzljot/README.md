@@ -3,7 +3,11 @@
 - Асинхронная работа опроса и таймера (локальное время)
 - Автоподключение к серверу в случае ошибки и визуализация на мнемосхеме
 # Пример визуализации:
-https://github.com/user-attachments/assets/c45e785c-85d2-4107-bdb4-7ef945c26b2f
+
+
+https://github.com/user-attachments/assets/909a420b-1e2b-4a95-8367-469073a65e27
+
+
 ![1](https://github.com/user-attachments/assets/0431019d-ccf6-4b2e-bd65-d82ff45abcb0)
 # Пример работы с интеграцией python по тегам:
 ![2](https://github.com/user-attachments/assets/d292e4b6-504f-4e14-bcc3-b800a14fbc7b)
