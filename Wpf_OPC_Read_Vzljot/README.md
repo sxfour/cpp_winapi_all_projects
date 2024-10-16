@@ -6,5 +6,8 @@
 ![1](https://github.com/user-attachments/assets/0431019d-ccf6-4b2e-bd65-d82ff45abcb0)
 # Пример работы с интеграцией python по тегам:
 ![2](https://github.com/user-attachments/assets/d292e4b6-504f-4e14-bcc3-b800a14fbc7b)
-https://github.com/user-attachments/assets/5623a92b-cf07-4b5c-899c-6c12c53e0bc6
+
+
+
+https://github.com/user-attachments/assets/6596bb65-49cf-481a-b3d7-4b0fbd6d7331
 
