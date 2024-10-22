@@ -11,4 +11,5 @@ https://github.com/user-attachments/assets/909a420b-1e2b-4a95-8367-469073a65e27
 # Пример работы с интеграцией python по тегам:
 ![2](https://github.com/user-attachments/assets/d292e4b6-504f-4e14-bcc3-b800a14fbc7b)
 
-# Серверная часть для ПО работает на протоколе OPC UA: https://github.com/sxfour/cpp_winapi_all_projects/tree/main/MPS_Linux_6_0_19
+# Серверная часть для ПО работает на протоколе OPC UA: 
+https://github.com/sxfour/cpp_winapi_all_projects/tree/main/MPS_Linux_6_0_19
