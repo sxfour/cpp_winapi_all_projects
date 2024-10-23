@@ -12,6 +12,11 @@ https://github.com/user-attachments/assets/e2cc1936-5b58-455c-b0b0-4d80701ff0ef
 
 https://github.com/user-attachments/assets/e51e43e2-886a-474c-916f-4b37e38a8e9f
 
+# Переподключение при ошибке опроса
+
+
+https://github.com/user-attachments/assets/15282621-bcd2-4cbf-a043-adcbe4bb271a
+
 
 # Серверная часть для ПО работает на протоколе OPC UA: 
 https://github.com/sxfour/cpp_winapi_all_projects/tree/main/MPS_Linux_6_0_19
