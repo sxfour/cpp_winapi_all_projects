@@ -5,7 +5,7 @@
 # Пример визуализации:
 
 
-https://github.com/user-attachments/assets/909a420b-1e2b-4a95-8367-469073a65e27
+https://github.com/user-attachments/assets/e2cc1936-5b58-455c-b0b0-4d80701ff0ef
 
 
 # Пример работы с интеграцией python по тегам:
