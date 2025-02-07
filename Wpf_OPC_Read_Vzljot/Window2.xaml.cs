@@ -40,7 +40,7 @@ namespace wpf_tsrv
             
             try
             {
-                var cs = "Host=192.168.0.126;Port=6889;Username=tsr_Archive;Password=teplos2006@#;Database=tsrData;Timeout=1";
+                // var cs = "";
 
                 NpgsqlConnection con = new NpgsqlConnection(cs);
 
@@ -75,7 +75,7 @@ namespace wpf_tsrv
             AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
             try
             {
-                var cs = "Host=192.168.0.126;Port=6889;Username=tsr_Archive;Password=teplos2006@#;Database=tsrData;Timeout=1";
+                // var cs = "";
 
                 NpgsqlConnection con = new NpgsqlConnection(cs);
 
