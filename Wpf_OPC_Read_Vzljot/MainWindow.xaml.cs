@@ -270,11 +270,11 @@ namespace wpf_opcua_tsr
         {
             try
             {
-                var cs = "Host=85.234.101.59;Port=5432;Username=monchteploset;Password=h69hY&6pDAO<;Database=default_db;Timeout=1";
+                // var cs = "";
 
                 NpgsqlConnection con = new NpgsqlConnection(cs);
 
-                string date_req = string.Format("SELECT * FROM public.\"TSRMonchTeploset\"");
+                // string date_req = string.Format("");
 
                 con.Open();
 
