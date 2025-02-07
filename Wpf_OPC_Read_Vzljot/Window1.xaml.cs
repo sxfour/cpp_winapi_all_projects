@@ -63,7 +63,7 @@ namespace wpf_tsrv
                 var values_tsr023_33km = new List<double>();
 
                 string license_code = LicenseInfo2();
-                if (license_code == "4a3f82-3f3a2kl-0e0g22-5fszcf")
+                if (license_code == "")
                 {
                     Dispatcher.Invoke(new Action(() => license_label.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(86, 255, 60))));
                     Dispatcher.Invoke(new Action(() => license_label.Content = "Лицензия: " + LicenseInfo2()));
@@ -173,11 +173,11 @@ namespace wpf_tsrv
         {
             try
             {
-                var cs = "Host=85.234.101.59;Port=5432;Username=monchteploset;Password=h69hY&6pDAO<;Database=default_db;Timeout=1";
+                // var cs = "";
 
                 NpgsqlConnection con = new NpgsqlConnection(cs);
 
-                string date_req = string.Format("SELECT * FROM public.\"TSRMonchTeploset\"");
+                // string date_req = string.Format("");
 
                 con.Open();
 
